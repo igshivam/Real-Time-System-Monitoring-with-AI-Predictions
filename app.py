@@ -10,7 +10,7 @@ from alerts import send_alert   # Import alert function
 cpu_model = joblib.load("models/cpu_model.pkl")
 anomaly_model = joblib.load("models/anomaly_model.pkl")
 
-st.title("🚀 Real-Time System Monitoring")
+st.title(" Real-Time System Monitoring")
 
 # Connect to database
 conn = sqlite3.connect("data/metrics.db")
@@ -34,8 +34,8 @@ st.metric("Predicted CPU Usage", f"{predicted_cpu:.2f}%")
 #ALERT TRIGGER
 
 if predicted_cpu > 85:
-    send_alert("⚠ Warning: High CPU usage predicted!")
-    st.error("⚠ High CPU Alert Sent!")
+    send_alert(" Warning: High CPU usage predicted!")
+    st.error(" High CPU Alert Sent!")
 else:
     st.success("System Normal")
 
@@ -44,4 +44,5 @@ else:
 anomaly = anomaly_model.predict([[latest_cpu, latest_memory, latest_disk]])[0]
 
 if anomaly == -1:
+
     st.warning("⚠ Anomaly Detected!")
