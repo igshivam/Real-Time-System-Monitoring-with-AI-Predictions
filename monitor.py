@@ -3,7 +3,7 @@ import psutil
 import time
 from database import insert_data, create_table
 
-create_table()   # ✅ Create table first
+create_table()   # Creating table first
 
 def collect_metrics():
     return (
@@ -15,4 +15,5 @@ def collect_metrics():
 while True:
     cpu, memory, disk = collect_metrics()
     insert_data(cpu, memory, disk)
+
     time.sleep(5)
