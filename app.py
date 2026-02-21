@@ -45,4 +45,5 @@ anomaly = anomaly_model.predict([[latest_cpu, latest_memory, latest_disk]])[0]
 
 if anomaly == -1:
 
-    st.warning("⚠ Anomaly Detected!")
+    st.warning(" Anomaly Detected!")
+
