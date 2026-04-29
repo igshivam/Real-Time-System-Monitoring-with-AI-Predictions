@@ -205,7 +205,7 @@ This project helps in understanding:
 
 ## 👨‍💻 Author
 
-**Satyam Sanjeev
+**Shivam Narayan
 
 
 ---
